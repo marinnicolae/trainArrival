@@ -85,6 +85,7 @@ $( document ).ready(function() {
 
 function update(trains) {
 	$.each(trains, function( index, train ) {
+		var holderSelector = $('#train'+train.id);
 		if (train.lastStation.name !== 'S7') {
 			train.update();
 		 	let trainVar = {
@@ -92,8 +93,6 @@ function update(trains) {
 			'type': typeNames[train.type],
 			'status': train.stop ? 'Train is in station: '+this.lastStation.name : 'Next station: '+this.nextStation.name
 			};
-			
-			var holderSelector = $('#train'+train.id);
 			holderSelector.find('#eta').html(trainVar.eta);
 			holderSelector.find('#trainType').html(trainVar.type);
 			holderSelector.find('#status').html(trainVar.status);
