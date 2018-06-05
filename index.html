@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Train-Scheduler</title>
+	<title>Train Arrival</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -12,7 +12,33 @@
   	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-	Train1
+<div class="container-fluid">
+        <div class="row mapRow" style="height: 200px;">
+            <div id="map" class="col-sm-12">
+
+            </div>
+        </div>
+
+
+        <div class="row timerRow" style="height: 120px;">
+            <div class="col-sm-12">
+                to display timer here
+            </div>
+        </div>
+        <div class="row dataRow" style="min-width: 320px; margin: auto;">
+            <div class="container">
+                <span id="eta"><p>ETA to next station: </p> </span>
+                <span id="trainType"></span>
+
+                <!-- daca trenul este in miscare-->
+                <span id="nextStation"><p>Distance to next station: </p></span>
+                <!-- daca trenul este oprit in statie-->
+                <span id="inStation"><p>Train is in station: </p></span>
+            </div>
+        </div>
+        <div class="condRow" style="position: absolute; bottom: 0; height: 75px;"></div>
+    </div>
+
 <span id='train1'> </span>
 <script type="text/javascript" src="main.js"></script>
 </body>

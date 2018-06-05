@@ -51,10 +51,10 @@ function Train(type)
 
 		if (this.distance > this.nextStation.distance) {
 			this.lastStation = this.nextStation;
-			this.nextStation = stations.map(function(i, station) {
-						if (this.lastStation.name === station.name) {
-							return stations[i++];
-						}
+			$.each(stations, function( index, station ) {
+	 			if (this.lastStation.name === station.name) {
+					this.nextStation = stations[i++];
+				}
 			});
 			this.stop=5*60;
 		}
